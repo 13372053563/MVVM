@@ -5,13 +5,12 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
-import androidx.room.Room;
-
 import com.tencent.mmkv.MMKV;
 import com.tencent.smtt.export.external.TbsCoreSettings;
 import com.tencent.smtt.sdk.QbSdk;
 import com.zsh.mvvm.db.AppDatabase;
 import com.zsh.mvvm.network.NetworkApi;
+import com.zsh.mvvm.ui.activity.ActivityManager;
 import com.zsh.mvvm.utils.MVUtils;
 
 import java.util.HashMap;

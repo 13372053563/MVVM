@@ -1,4 +1,4 @@
-package com.zsh.mvvm;
+package com.zsh.mvvm.ui.activity;
 
 import android.app.Activity;
 
