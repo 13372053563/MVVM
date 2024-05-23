@@ -69,4 +69,9 @@ public class CustomImageView extends ShapeableImageView {
     public static void setNetworkUrl(ImageView imageView, String url) {
         Glide.with(BaseApplication.getContext()).load(url).apply(OPTIONS).into(imageView);
     }
+
+    @BindingAdapter(value = {"localUrl"}, requireAll = false)
+    public static void setLocalUrl(ImageView imageView, String url) {
+        Glide.with(BaseApplication.getContext()).load(url).apply(OPTIONS_LOCAL).into(imageView);
+    }
 }

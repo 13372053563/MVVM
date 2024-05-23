@@ -15,6 +15,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
         release {
             minifyEnabled false
@@ -80,4 +81,10 @@ dependencies {
     // 腾讯X5内核WebView
     implementation 'com.tencent.tbs:tbssdk:44085'
 
+    // 高德地图
+    implementation 'com.amap.api:3dmap:9.2.0'
+    //定位功能
+    implementation 'com.amap.api:location:6.1.0'
+    //搜索功能
+    implementation 'com.amap.api:search:9.2.0'
 }

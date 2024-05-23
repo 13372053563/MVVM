@@ -21,7 +21,6 @@ public class SplashActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // setContentView(R.layout.activity_splash);
         ActivitySplashBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
         setStatusBar(true);
         EasyAnimation.moveViewWidth(binding.tvTranslate, () -> {

@@ -29,7 +29,7 @@ import com.zsh.mvvm.db.dao.WallPaperDao;
         WallPaper.class,
         News.class,
         Video.class,
-        User.class}, version = 4, exportSchema = false)
+        User.class}, version = 5, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     private static final String DATABASE_NAME = "mvvm_demo";
     private static volatile AppDatabase mInstance;
@@ -45,6 +45,7 @@ public abstract class AppDatabase extends RoomDatabase {
                             .addMigrations(MIGRATION_1_2)
                             .addMigrations(MIGRATION_2_3)
                             .addMigrations(MIGRATION_3_4)
+                            .addMigrations(MIGRATION_4_5)
                             .build();
                 }
             }
@@ -107,6 +108,14 @@ public abstract class AppDatabase extends RoomDatabase {
                     "nickname TEXT," +
                     "introduction TEXT," +
                     "PRIMARY KEY (`uid`))");
+        }
+    };
+
+    static final Migration MIGRATION_4_5 = new Migration(4, 5) {
+        @Override
+        public void migrate(@NonNull SupportSQLiteDatabase database) {
+            // User表中新增avatar字段
+            database.execSQL("ALTER TABLE `user` ADD COLUMN avatar TEXT");
         }
     };
 

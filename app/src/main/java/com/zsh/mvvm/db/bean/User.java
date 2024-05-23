@@ -19,8 +19,17 @@ public class User extends BaseObservable {
     private String confirmPwd;
     private String nickname;
     private String introduction;
+    private String avatar;
 
     public User() {
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public User(int uid, String account, String pwd, String confirmPwd, String nickname, String introduction) {
